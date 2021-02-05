@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('PaginaPrincipal');
 });
 
-Route::get('/Inicio', function () {
-    return view('PaginaPrincipal');
+Route::get('/Nosotros', function () {
+    return view('Nosotros');
 });
 
 

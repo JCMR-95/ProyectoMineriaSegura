@@ -13,3 +13,8 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+require('./components/Presentacion');
+require('./components/ListaCursos');
+require('./components/Consultas');
+require('./components/Auspiciadores');
+require('./components/Nosotros');

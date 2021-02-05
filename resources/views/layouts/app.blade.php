@@ -20,9 +20,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    <div id="app" style="background-color:#351E75;">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
+            <div class="container" style="background-color:#230D63;">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
@@ -38,7 +38,7 @@
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Inicio') }}</a>
+                            <a class="nav-link" href="{{ route('login') }}" >{{ __('Inicio') }}</a>
                         </li>
                     </ul>
 
