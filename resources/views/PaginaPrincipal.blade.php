@@ -11,15 +11,18 @@
             <div id="presentacion">
             </div>
         </div>
-        <div class="content" style="background-color:#230D63;">
+        <br>
+        <div class="content" style="background-color:#351E75;">
             <div id="listaCursos">
             </div>
         </div>
+        <br>
         <div class="content" style="background-color:#351E75;">
             <div id="consultas">
             </div>
         </div>
-        <div class="content" style="background-color:#230D63;">
+        <br>
+        <div class="content" style="background-color:#351E75;">
             <div id="auspiciadores">
             </div>
         </div>
