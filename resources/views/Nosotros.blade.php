@@ -16,13 +16,11 @@
             <div id="consultas">
             </div>
         </div>
+        <br>
         <div class="content">
             <div id="auspiciadores">
             </div>
         </div>
     </body>
-
-    <script src="{{ asset('js/app.js') }}" defer></script>
-   
 </html
 @endsection

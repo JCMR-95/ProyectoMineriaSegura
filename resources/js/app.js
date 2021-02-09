@@ -12,9 +12,18 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-require('./components/Example');
+//Menú Principal
 require('./components/Presentacion');
 require('./components/ListaCursos');
 require('./components/Consultas');
 require('./components/Auspiciadores');
 require('./components/Nosotros');
+
+//Estudiante
+
+require('./components/MenuEstudiante');
+
+
+//Administrador
+
+require('./components/MenuAdministrador');

@@ -70,4 +70,9 @@
         </div>
     </div>
 </div>
+<br>
+<div class="content" style="background-color:#351E75;">
+    <div id="auspiciadores">
+    </div>
+</div>
 @endsection

@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Minería Segura</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -35,19 +35,19 @@
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}" >{{ __('Inicio') }}</a>
+                            <a class="nav-link" href="{{ route('inicio') }}" >{{ __('Inicio') }}</a>
                         </li>
                     </ul>
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Nosotros') }}</a>
+                            <a class="nav-link" href="{{ route('nosotros') }}">{{ __('Nosotros') }}</a>
                         </li>
                     </ul>
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">{{ __('Contacto') }}</a>
+                            <a class="nav-link" href="{{ route('contacto') }}">{{ __('Contacto') }}</a>
                         </li>
                     </ul>
 

@@ -8,7 +8,7 @@
     </head>
     <body>
         <div class="content" style="background-color:#351E75;">
-            <div id="presentacion">
+            <div id="contacto">
             </div>
         </div>
         <br>
@@ -26,6 +26,6 @@
             <div id="auspiciadores">
             </div>
         </div>
-    </body>
+    </body>  
 </html
 @endsection
