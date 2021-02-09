@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Página Principal
+//Página Principal-------------------------------------------------------------------------------------------------
 
 Route::get('/', function () {
     return view('PaginaPrincipal');
@@ -27,17 +27,26 @@ Route::get('/Contacto', function () {
     return view('Contacto');
 })->name('contacto');
 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Iniciar Administrador--------------------------------------------------------------------------------------------
+
+Route::get('/IniciarAdministrador', function () {
+    return view('iniciarAdministrador');
+})->name('iniciarAdministrador');
+
+Route::post('primerAdministrador', [App\Http\Controllers\AdministradorController::class, 'primerAdministrador']);
 
 Route::group(['middleware' => 'auth'], function(){
 
-    //Estudiante
+    //Estudiante---------------------------------------------------------------------------------------------------
 
 
 
-    //Administrador
+    //Administrador------------------------------------------------------------------------------------------------
+    
 
     Route::get('/MenuAdministrador', function () {
         return view('menuAdministrador');

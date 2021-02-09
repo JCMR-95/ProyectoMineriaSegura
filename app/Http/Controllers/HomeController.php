@@ -24,7 +24,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        dd(Auth::user()->email);
+        if(Auth::user()->email == "admin@valorice.cl"){
+            return view('MenuAdministrador');
+        }
         return view('home');
     }
 }
