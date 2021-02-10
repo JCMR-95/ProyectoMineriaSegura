@@ -8,8 +8,8 @@ function Auspiciadores() {
         <div className="container">
             <div className="row justify-content-center">
                 <div className="col-md-8">
-                    <img src={logoValorice} alt="Logo" width="220" height="80"/>
-                    <img src={logoInnovaWill} alt="Logo" width="220" height="80"/>
+                    <img src={logoValorice} alt="Logo" width="220" height="80" align="left"/>
+                    <img src={logoInnovaWill} alt="Logo" width="220" height="80" align="right"/>
                 </div>
             </div>
         </div>

@@ -11,7 +11,7 @@ function MenuAdministrador() {
 
                         <div className="card-body">
                             <div class="row justify-content-center">
-                                <button type="submit" class="btn btn-primary">Agregar Administrador</button>
+                                <button type="submit" class="btn btn-primary">Agregar Estudiante</button>
                             </div>
                             <div class="row justify-content-center">
                                 <button type="submit" class="btn btn-primary">Ver Estudiantes</button>

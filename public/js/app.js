@@ -1950,12 +1950,14 @@ function Auspiciadores() {
           src: _images_Logo_Valorice_png__WEBPACK_IMPORTED_MODULE_2__.default,
           alt: "Logo",
           width: "220",
-          height: "80"
+          height: "80",
+          align: "left"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
           src: _images_Logo_InnovaWill_png__WEBPACK_IMPORTED_MODULE_3__.default,
           alt: "Logo",
           width: "220",
-          height: "80"
+          height: "80",
+          align: "right"
         })]
       })
     })
@@ -2143,7 +2145,7 @@ function MenuAdministrador() {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
                 type: "submit",
                 "class": "btn btn-primary",
-                children: "Agregar Administrador"
+                children: "Agregar Estudiante"
               })
             }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
               "class": "row justify-content-center",
