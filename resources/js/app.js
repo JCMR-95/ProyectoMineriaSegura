@@ -18,6 +18,7 @@ require('./components/ListaCursos');
 require('./components/Consultas');
 require('./components/Auspiciadores');
 require('./components/Nosotros');
+require('./components/Contacto');
 
 //Estudiante
 

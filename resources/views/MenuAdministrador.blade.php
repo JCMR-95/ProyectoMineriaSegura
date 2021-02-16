@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<body>
-    <div class="content" style="background-color:#351E75;">
+<body style="background-color:#100c4c;">
+    <div class="content" style="background-color:#100c4c;">
         <div id="menuAdministrador">
         </div>
     </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<body>
+<body style="background-color:#351E75;">
     <div class="content" style="background-color:#351E75;">
         <div id="menuEstudiante">
         </div>

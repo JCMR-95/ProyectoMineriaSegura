@@ -20,10 +20,10 @@
     <link href="{{ asset('css/general.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app" style="background-color:#351E75;">
+    <div id="app" style="background-color:#100c4c;">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container" style="background-color:#230D63;">
-                <img src="{{ asset('/images/Logo-OTEC.png') }}" width="210" height="70">
+            <div class="container" style="background-color:#08042c;">
+                <img src="{{ asset('/images/Logo-OTEC.png') }}" width="300" height="110">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

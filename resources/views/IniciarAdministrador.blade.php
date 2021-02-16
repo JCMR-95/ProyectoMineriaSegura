@@ -6,15 +6,15 @@
     <head>
         
     </head>
-    <body>
-        <div class="content" style="background-color:#351E75;">
+    <body style="background-color:#100c4c;">
+        <div class="content" style="background-color:#100c4c;">
             <form action="primerAdministrador" method="post">
                 @csrf
                 <button type="submit">Enviar Datos</button>
             </form>
         </div>
         <br>
-        <div class="content" style="background-color:#351E75;">
+        <div class="content" style="background-color:##100c4c;">
             <div id="auspiciadores">
             </div>
         </div>

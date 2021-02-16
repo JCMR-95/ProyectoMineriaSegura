@@ -10,11 +10,15 @@ function MenuAdministrador() {
                         <div class="card-header"> Menú Principal </div>
 
                         <div className="card-body">
-                            <div class="row justify-content-center">
-                                <button type="submit" class="btn btn-primary">Agregar Estudiante</button>
+
+                            <div class="row justify-content-center">           
+                                <a href="/listaInteresados" class="btn btn-primary"> Ver Interesados </a>     
                             </div>
                             <div class="row justify-content-center">
-                                <button type="submit" class="btn btn-primary">Ver Estudiantes</button>
+                                <a href="/Volver" class="btn btn-primary"> Agregar Estudiantes </a> 
+                            </div>
+                            <div class="row justify-content-center">
+                                <a href="/Volver" class="btn btn-primary"> Ver Estudiantes </a> 
                             </div>
                             
                         </div>

@@ -16,18 +16,20 @@ use Illuminate\Support\Facades\Route;
 //Página Principal-------------------------------------------------------------------------------------------------
 
 Route::get('/', function () {
-    return view('PaginaPrincipal');
+    return view('paginaPrincipal');
 })->name('inicio');
 
-Route::get('/Nosotros', function () {
-    return view('Nosotros');
+Route::get('/nosotros', function () {
+    return view('nosotros');
 })->name('nosotros');
 
-Route::get('/Contacto', function () {
-    return view('Contacto');
+Route::get('contacto', function () {
+    return view('contacto');
 })->name('contacto');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('guardarInteresado', [App\Http\Controllers\PrincipalController::class, 'guardarInteresado']);
 
 Auth::routes();
 
@@ -47,9 +49,12 @@ Route::group(['middleware' => 'auth'], function(){
 
     //Administrador------------------------------------------------------------------------------------------------
     
-
-    Route::get('/MenuAdministrador', function () {
+    Route::get('/menuAdministrador', function () {
         return view('menuAdministrador');
     })->name('menuAdministrador');
+
+    Route::get('/listaInteresados', function () {
+        return view('listaInteresados');
+    })->name('listaInteresados');
 });
 

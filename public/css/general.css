@@ -4018,7 +4018,7 @@ input[type=button].btn-block {
   padding: 0.25rem 0.75rem;
   font-size: 1.125rem;
   line-height: 1;
-  background-color: transparent;
+  background-color: #140c93;
   border: 1px solid transparent;
   border-radius: 0.25rem;
 }
@@ -4344,7 +4344,7 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #230D63;
+  background-color: #08042c;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
@@ -6193,7 +6193,7 @@ button.bg-dark:focus {
 }
 
 .bg-white {
-  background-color: #230D63 !important;
+  background-color: #08042c !important;
 }
 
 .bg-transparent {

@@ -6,7 +6,7 @@
     <head>
         
     </head>
-    <body>
+    <body style="background-color:#100c4c;">
         <div class="content">
             <div id="nosotros">
             </div>
