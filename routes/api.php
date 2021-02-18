@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::post('guardarInteresado', [App\Http\Controllers\PrincipalController::class, 'guardarInteresado'])->name('guardarInteresado');
+Route::get('listaInteresados', 'AdministradorController@mostrarInteresados');
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();

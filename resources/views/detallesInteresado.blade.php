@@ -3,9 +3,9 @@
 @section('content')
 <body style="background-color:#100c4c;">
     <div class="content" style="background-color:#100c4c;">
-        <div id="listaInteresados">
+        <div id="detallesInteresado">
         </div>
-        <div id="botonVolverMenuAdmin">
+        <div id="botonVolverListaInteresados">
         </div>
     </div>
     <br>
@@ -14,5 +14,7 @@
         </div>
     </div>
 </body>
+
+<script> let consulta= '{{ $consulta }}' </script>
 
 @endsection

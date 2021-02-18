@@ -8,8 +8,7 @@ use DB;
 class AdministradorController extends Controller
 {
 
-    public function primerAdministrador()
-    {
+    public function primerAdministrador(){
         $nombre = "Administrador";
         $correo = "admin@valorice.cl";
         $contrasena = "adminvalorice";
@@ -36,5 +35,25 @@ class AdministradorController extends Controller
         }
 
         return view('PaginaPrincipal');
+    }
+
+
+    public function mostrarInteresados(){
+
+        $interesados = DB::table('tabla_interesados')->get();
+        return response()->json($interesados);
+    }
+
+    public function detallesInteresado($id){
+
+        $consulta = DB::select('select consulta from tabla_interesados where id = :id', ['id' => $id]);
+        $consulta = $consulta[0]->consulta;
+        return view('detallesInteresado',compact('consulta'));
+    }
+
+    public function eliminarInteresado($id){
+
+        DB::table('tabla_interesados')->delete($id);
+        return view('listaInteresados');
     }
 }

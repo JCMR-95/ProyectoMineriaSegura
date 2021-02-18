@@ -28,3 +28,10 @@ require('./components/MenuEstudiante');
 //Administrador
 
 require('./components/MenuAdministrador');
+require('./components/ListaInteresados');
+require('./components/DetallesInteresado');
+require('./components/BotonVolverMenuAdmin');
+require('./components/BotonVolverListaInteresados');
+
+
+

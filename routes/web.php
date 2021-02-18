@@ -56,5 +56,8 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/listaInteresados', function () {
         return view('listaInteresados');
     })->name('listaInteresados');
+
+    Route::get('detalles/{id}', [App\Http\Controllers\AdministradorController::class, 'detallesInteresado']);
+    Route::get('eliminar/{id}', [App\Http\Controllers\AdministradorController::class, 'eliminarInteresado']);
 });
 
