@@ -3,7 +3,9 @@
 @section('content')
 <body style="background-color:#100c4c;">
     <div class="content" style="background-color:#100c4c;">
-        <div id="menuEstudiante">
+        <div id="listaInteresadosAtendidos">
+        </div>
+        <div id="botonVolverMenuAdmin">
         </div>
     </div>
     <br>

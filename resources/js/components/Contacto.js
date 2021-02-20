@@ -76,7 +76,7 @@ class Contacto extends Component {
                                 <strong>Teléfono:</strong>
                                 <input type="text" name="telefonoInteresado" className="form-control" value={this.state.telefonoInteresado} onChange={this.onChangeValue} />
                                 <strong>Consulta:</strong>
-                                <textarea className="form-control" name="consultaInteresado" value={this.state.consultaInteresado} onChange={this.onChangeValue}></textarea>
+                                <input type="text" name="consultaInteresado" className="form-control" value={this.state.consultaInteresado} onChange={this.onChangeValue} />
                                 <button className="btn btn-primary">Enviar</button>
                             </form>
                         </div>

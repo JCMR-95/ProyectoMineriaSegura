@@ -20,6 +20,7 @@ class TablaInteresados extends Migration
             $table->string('correo')->nullable();
             $table->string('telefono')->nullable();
             $table->string('consulta')->nullable();
+            $table->string('estado')->nullable();
         });
     }
 

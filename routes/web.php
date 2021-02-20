@@ -59,5 +59,16 @@ Route::group(['middleware' => 'auth'], function(){
 
     Route::get('detalles/{id}', [App\Http\Controllers\AdministradorController::class, 'detallesInteresado']);
     Route::get('eliminar/{id}', [App\Http\Controllers\AdministradorController::class, 'eliminarInteresado']);
+    Route::get('atendido/{id}', [App\Http\Controllers\AdministradorController::class, 'atenderInteresado']);
+
+    Route::get('/listaInteresadosAtendidos', function () {
+        return view('listaInteresadosAtendidos');
+    })->name('listaInteresadosAtendidos');
+
+    Route::get('/registrarEstudiante', function () {
+        return view('registrarEstudiante');
+    })->name('registrarEstudiante');
+
+    Route::post('guardarEstudiante', [App\Http\Controllers\AdministradorController::class, 'guardarEstudiante']);
 });
 

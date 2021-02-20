@@ -29,9 +29,12 @@ require('./components/MenuEstudiante');
 
 require('./components/MenuAdministrador');
 require('./components/ListaInteresados');
+require('./components/ListaInteresadosAtendidos');
 require('./components/DetallesInteresado');
 require('./components/BotonVolverMenuAdmin');
 require('./components/BotonVolverListaInteresados');
+require('./components/BotonVerInteresadosAtendidos');
+require('./components/RegistrarEstudiante');
 
 
 

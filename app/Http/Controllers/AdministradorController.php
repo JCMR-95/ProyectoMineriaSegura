@@ -17,7 +17,7 @@ class AdministradorController extends Controller
 
         if($adminIngresado != null){
 
-            return view('PaginaPrincipal');
+            return view('paginaPrincipal');
             
         }else{
 
@@ -34,13 +34,13 @@ class AdministradorController extends Controller
             ]);
         }
 
-        return view('PaginaPrincipal');
+        return view('paginaPrincipal');
     }
 
 
     public function mostrarInteresados(){
 
-        $interesados = DB::table('tabla_interesados')->get();
+        $interesados = DB::table('tabla_interesados')->where('estado', null)->get();
         return response()->json($interesados);
     }
 
@@ -55,5 +55,34 @@ class AdministradorController extends Controller
 
         DB::table('tabla_interesados')->delete($id);
         return view('listaInteresados');
+    }
+
+    public function atenderInteresado($id){
+
+        $interesado = DB::table('tabla_interesados')->where('id', $id)->update(['estado' => 'Atendido']);
+        return view('listaInteresados');
+    }
+
+    public function mostrarInteresadosAtendidos(){
+
+        $interesados = DB::table('tabla_interesados')->where('estado', 'Atendido')->get();
+        return response()->json($interesados);
+    }
+
+    public function guardarEstudiante(Request $request){
+
+        $nombre = $request->nombreEstudiante;
+        $correo = $request->correoEstudiante;
+        $contrasena = $request->contrasenaEstudiante;
+
+        $contrasena = password_hash($contrasena, PASSWORD_DEFAULT);
+
+        DB::table('users')->insert([
+            'name' => $nombre,
+            'email' => $correo,
+            'password' => $contrasena
+        ]);
+
+        return view('menuAdministrador');
     }
 }

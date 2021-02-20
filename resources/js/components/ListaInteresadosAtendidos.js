@@ -4,7 +4,7 @@ import {Table, Column, Cell} from 'fixed-data-table';
 import axios from 'axios';
 
 
-export default class ListaInteresados extends Component {
+export default class ListaInteresadosAtendidos extends Component {
 
     constructor(props){
         super(props);
@@ -16,7 +16,7 @@ export default class ListaInteresados extends Component {
       componentDidMount(){
         this._isMounted = true;
         
-        axios.get('http://proyectomineriasegura.test/api/listaInteresados').then(response=>{
+        axios.get('http://proyectomineriasegura.test/api/listaInteresadosAtendidos').then(response=>{
           this.setState({interesados:response.data})
         }).catch(error=>{
           alert("Error "+error)
@@ -43,7 +43,6 @@ export default class ListaInteresados extends Component {
                   <th>Teléfono</th>
                   <th>Consulta</th>
                   <th>Eliminar</th>
-                  <th>Atendido</th>
                 </tr>
               </thead>
               <tbody id="bodytable">
@@ -75,11 +74,6 @@ export default class ListaInteresados extends Component {
                   Eliminar
               </a>
             </td>
-            <td>
-              <a href={"/atendido/"+ data.id} className="btn btn-warning">
-                  ¡Atendido!
-              </a>
-            </td>
           </tr>
         )
 
@@ -89,6 +83,6 @@ export default class ListaInteresados extends Component {
 }
 
 
-if (document.getElementById('listaInteresados')) {
-    ReactDOM.render(<ListaInteresados />, document.getElementById('listaInteresados'));
+if (document.getElementById('listaInteresadosAtendidos')) {
+    ReactDOM.render(<ListaInteresadosAtendidos />, document.getElementById('listaInteresadosAtendidos'));
 }

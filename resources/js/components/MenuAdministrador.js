@@ -15,7 +15,7 @@ function MenuAdministrador() {
                                 <a href="/listaInteresados" class="btn btn-primary"> Ver Interesados </a>     
                             </div>
                             <div class="row justify-content-center">
-                                <a href="/Volver" class="btn btn-primary"> Agregar Estudiantes </a> 
+                                <a href="/registrarEstudiante" class="btn btn-primary"> Agregar Estudiantes </a> 
                             </div>
                             <div class="row justify-content-center">
                                 <a href="/Volver" class="btn btn-primary"> Ver Estudiantes </a> 
