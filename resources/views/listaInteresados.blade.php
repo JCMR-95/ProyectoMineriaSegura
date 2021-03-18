@@ -3,6 +3,7 @@
 @section('content')
 <body style="background-color:#100c4c;">
     <div class="content" style="background-color:#100c4c;">
+        @include('mensajes-flash')
         <div id="listaInteresados">
         </div>
         <div id="botonVerInteresadosAtendidos">

@@ -17,7 +17,7 @@ class AdministradorController extends Controller
 
         if($adminIngresado != null){
 
-            return view('paginaPrincipal');
+            return back()->with('success','Administrador ingresado.');
             
         }else{
 
@@ -34,7 +34,7 @@ class AdministradorController extends Controller
             ]);
         }
 
-        return view('paginaPrincipal');
+        return back()->with('success','Administrador ingresado.');
     }
 
 
@@ -54,13 +54,13 @@ class AdministradorController extends Controller
     public function eliminarInteresado($id){
 
         DB::table('tabla_interesados')->delete($id);
-        return view('listaInteresados');
+        return back()->with('success','Interesado eliminado.');
     }
 
     public function atenderInteresado($id){
 
         $interesado = DB::table('tabla_interesados')->where('id', $id)->update(['estado' => 'Atendido']);
-        return view('listaInteresados');
+        return back()->with('success','Interesado atendido.');
     }
 
     public function mostrarInteresadosAtendidos(){
@@ -70,6 +70,11 @@ class AdministradorController extends Controller
     }
 
     public function guardarEstudiante(Request $request){
+
+        if($request->nombreEstudiante == null || $request->correoEstudiante == null || $request->contrasenaEstudiante == null){
+
+            return back()->with('error','Debe rellenar todos los campos.');
+        }
 
         $nombre = $request->nombreEstudiante;
         $correo = $request->correoEstudiante;
@@ -83,6 +88,10 @@ class AdministradorController extends Controller
             'password' => $contrasena
         ]);
 
-        return view('menuAdministrador');
+        DB::table('tabla_estudiantes')->insert([
+            'correo' => $correo
+        ]);
+
+        return back()->with('success','Estudiante ingresado.');
     }
 }

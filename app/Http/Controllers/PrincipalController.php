@@ -13,7 +13,7 @@ class PrincipalController extends Controller
 
         if($request->nombreInteresado == null || $request->correoInteresado == null || $request->telefonoInteresado == null || $request->consultaInteresado == null){
 
-            return "Consulta Inválida";
+            return back()->with('error','Debe completar todos los campos.');
             
         }else{
 
@@ -25,6 +25,6 @@ class PrincipalController extends Controller
             ]);
         }
 
-        return "Listo";
+        return back()->with('success','Consulta enviada con éxito.');
     }
 }

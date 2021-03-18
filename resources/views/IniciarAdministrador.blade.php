@@ -7,6 +7,7 @@
         
     </head>
     <body style="background-color:#100c4c;">
+        @include('mensajes-flash')
         <div class="content" style="background-color:#100c4c;">
             <form action="primerAdministrador" method="post">
                 @csrf

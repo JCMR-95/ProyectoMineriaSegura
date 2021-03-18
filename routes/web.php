@@ -23,19 +23,19 @@ Route::get('/nosotros', function () {
     return view('nosotros');
 })->name('nosotros');
 
-Route::get('contacto', function () {
+Route::get('/contacto', function () {
     return view('contacto');
 })->name('contacto');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::post('guardarInteresado', [App\Http\Controllers\PrincipalController::class, 'guardarInteresado']);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 
 //Iniciar Administrador--------------------------------------------------------------------------------------------
 
-Route::get('/IniciarAdministrador', function () {
+Route::get('/iniciarAdministrador', function () {
     return view('iniciarAdministrador');
 })->name('iniciarAdministrador');
 
