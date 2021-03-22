@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
+use Auth;
 
 class AdministradorController extends Controller
 {
@@ -53,12 +54,14 @@ class AdministradorController extends Controller
 
     public function eliminarInteresado($id){
 
+        $this->validarAdministrador();
         DB::table('tabla_interesados')->delete($id);
         return back()->with('success','Interesado eliminado.');
     }
 
     public function atenderInteresado($id){
 
+        $this->validarAdministrador();
         $interesado = DB::table('tabla_interesados')->where('id', $id)->update(['estado' => 'Atendido']);
         return back()->with('success','Interesado atendido.');
     }
@@ -71,6 +74,7 @@ class AdministradorController extends Controller
 
     public function guardarEstudiante(Request $request){
 
+        $this->validarAdministrador();
         if($request->nombreEstudiante == null || $request->correoEstudiante == null || $request->contrasenaEstudiante == null){
 
             return back()->with('error','Debe rellenar todos los campos.');
@@ -93,5 +97,12 @@ class AdministradorController extends Controller
         ]);
 
         return back()->with('success','Estudiante ingresado.');
+    }
+
+    public function validarAdministrador(){
+
+        if(Auth::user()->email != "admin@valorice.cl"){
+            dd("Permiso denegado.");
+        }
     }
 }
